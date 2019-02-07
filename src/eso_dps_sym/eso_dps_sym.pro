@@ -13,8 +13,13 @@ DESTDIR = $${LIB_PATH}
 #-------------
 
 HEADERS += \
-    char_attributes.h
+    char_attributes.h \
+    enum.h \
+    base_skill.h \
+    skills.h
 
 SOURCES += \
-    char_attributes.cpp
+    char_attributes.cpp \
+    base_skill.cpp \
+    skills.cpp
 

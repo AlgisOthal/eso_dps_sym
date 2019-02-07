@@ -12,6 +12,10 @@ DESTDIR = $${BIN_PATH}
 
 #-------------
 
+LIBS += \
+    -L$${LIB_PATH} \
+    -leso_dps_sym \
+
 SOURCES += \
     main.cpp
 

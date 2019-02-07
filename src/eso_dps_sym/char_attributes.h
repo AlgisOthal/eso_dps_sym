@@ -14,13 +14,6 @@ public:
     uint32_t base_resource;
     uint32_t regen_resource; // per 2 sec
 };
-
-std::ostream& operator<<( std::ostream &s, CharAttributes& a )
-{
-    s << "(pen - " << a.penetration << "), "
-      << "(dam - " << a.damage << ')';
-
-    return s;
-}
+std::ostream& operator<<( std::ostream& s, CharAttributes& a );
 
 #endif // CHAR_ATTRIBUTES_H
