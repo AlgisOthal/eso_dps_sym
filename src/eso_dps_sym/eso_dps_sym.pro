@@ -12,4 +12,3 @@ DESTDIR = $${BIN_PATH}
 
 #-------------
 
-SOURCES += main.cpp
