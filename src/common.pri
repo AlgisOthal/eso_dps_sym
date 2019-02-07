@@ -1,0 +1,4 @@
+OBJECTS_DIR = {$$BUILD_DIR}/obj
+MOC_DIR = {$$BUILD_DIR}/moc
+UI_DIR = {$$BUILD_DIR}/ui
+RCC_DIR = {$$BUILD_DIR}/rcc
