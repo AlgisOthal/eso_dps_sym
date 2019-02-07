@@ -1,14 +1,20 @@
 ROOT_DIR= $$PWD/../
 include( ../common.pri )
 
-CONFIG += console c++11
+CONFIG += console plugin c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
 #-------------
 
-TEMPLATE = app
-DESTDIR = $${BIN_PATH}
+TEMPLATE = lib
+DESTDIR = $${LIB_PATH}
 
 #-------------
+
+HEADERS += \
+    char_attributes.h
+
+SOURCES += \
+    char_attributes.cpp
 

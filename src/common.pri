@@ -1,3 +1,5 @@
+INCLUDEPATH += $${ROOT_DIR}
+
 BUILD_DIR = $${ROOT_DIR}/build
 
 OBJECTS_DIR = $${BUILD_DIR}/obj

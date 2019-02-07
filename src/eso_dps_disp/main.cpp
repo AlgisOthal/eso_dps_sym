@@ -1,9 +1,15 @@
 #include <iostream>
 
-using namespace std;
+#include <eso_dps_sym/char_attributes.h>
+
+#include "defines.h"
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    using namespace std;
+
+    CharAttributes attrs = init_attrs;
+    cout << attrs << endl;
+
     return 0;
 }
