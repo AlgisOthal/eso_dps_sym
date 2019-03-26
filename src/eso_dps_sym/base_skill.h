@@ -6,13 +6,26 @@
 #include <map>
 
 #include "enum.h"
+#include "char_attributes.h"
 
-DECLARE_ENUM( SkillType, la, surprise )
+DECLARE_ENUM( SkillType, la, swallow )
 
 class BaseSkill
 {
 public:
-    virtual uint32_t damage() = 0;
+    virtual uint32_t damage( CharAttributes& attrs );
+
+    BaseSkill(){}
+    BaseSkill( double a_, double b_, double c_, uint64_t cost_ = 0 ):
+        a( a_ ), b( b_ ), c( c_ ), cost( cost_ )
+    {}
+
+protected:
+    double a;
+    double b;
+    double c;
+
+    uint64_t cost;
 };
 typedef std::shared_ptr< BaseSkill > BaseSkillPtr;
 

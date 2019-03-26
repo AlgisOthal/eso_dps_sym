@@ -1,8 +1,7 @@
 #include "skills.h"
 
-REGISTER_SKILL( SkillType::la, LightAttak );
+REGISTER_SKILL( SkillType::la, LightAttack );
+REGISTER_SKILL( SkillType::swallow, SwallowSoul );
 
-uint32_t LightAttak::damage()
-{
-    return 23000;
-}
+//-------------------------
+

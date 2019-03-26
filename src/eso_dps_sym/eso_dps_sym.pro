@@ -16,10 +16,14 @@ HEADERS += \
     char_attributes.h \
     enum.h \
     base_skill.h \
-    skills.h
+    skills.h \
+    dps_sym.h \
+    rotation_prepare.h
 
 SOURCES += \
     char_attributes.cpp \
     base_skill.cpp \
-    skills.cpp
+    skills.cpp \
+    dps_sym.cpp \
+    rotation_prepare.cpp
 
