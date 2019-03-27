@@ -26,4 +26,35 @@ public:
     {}
 };
 
+class TwistingPath: public BaseSkill
+{
+public:
+    TwistingPath():
+        BaseSkill( 0, 0, 0, 3159 )
+    {}
+
+    SkillType typeOfDot(){ return SkillType::twisting_path_dot; }
+    SkillWithTimes createDot();
+};
+
+class TwistingPathDot: public BaseSkill
+{
+public:
+    TwistingPathDot():
+        // $1 = 0.0212544 Magicka + 0.221895 SD - 1.64061
+        // (Magicka, R2 = 0.999992, ratio = 10.44)
+        BaseSkill( 0.0212544, 0.221895, -1.64061, 0 )
+    {}
+};
+
+class MiracleResolve: public BaseSkill
+{
+public:
+    MiracleResolve():
+        BaseSkill( 0, 0, 0, 2430 )
+    {}
+
+    BuffType createBuff(){ return BuffType::resolve; }
+};
+
 #endif // SKILLS_H

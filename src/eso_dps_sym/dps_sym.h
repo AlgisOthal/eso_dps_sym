@@ -13,11 +13,14 @@ struct TakenDamage
 {
     uint64_t damage;
     SkillType skill;
+    uint64_t time;
 
     TakenDamage( uint64_t dmg_,
-                 SkillType skill_ ):
+                 SkillType skill_,
+                 uint64_t time_):
         damage( dmg_ ),
-        skill( skill_ )
+        skill( skill_ ),
+        time( time_ )
     {}
 };
 typedef std::vector< TakenDamage > TakenDamages;
@@ -34,6 +37,7 @@ public:
 
 private:
     SkillWithTimes _skills;
+    BuffWithTimes _buffs;
 };
 
 #endif // DPS_SYM_H

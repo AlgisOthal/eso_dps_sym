@@ -3,21 +3,14 @@
 
 #include "base_skill.h"
 
-struct SkillWithTime
-{
-    SkillType skill;
-    uint64_t time;
-};
-typedef std::vector< SkillWithTime > SkillWithTimes;
-
 class RotationPrepare
 {
 public:
     SkillWithTimes getSkills(){ return _skills; }
 
     void skillAndWait( SkillType skill, uint msec );
-    void laAndSkill( SkillType skill,
-                     uint msec_after,
+    void laAndSkill(SkillType skill,
+                     uint msec_before = 1000,
                      uint msec_between = 100 );
 
 private:

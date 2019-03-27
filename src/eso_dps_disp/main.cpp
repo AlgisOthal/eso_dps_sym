@@ -14,9 +14,14 @@ int main()
     cout << attrs << endl;
 
     RotationPrepare rotation;
-    rotation.laAndSkill( SkillType::swallow, 1000 );
-    rotation.laAndSkill( SkillType::swallow, 1000 );
-    rotation.laAndSkill( SkillType::swallow, 1000 );
+    rotation.skillAndWait( SkillType::resolve, 0 );
+    rotation.laAndSkill( SkillType::twisting_path );
+    rotation.laAndSkill( SkillType::swallow );
+    rotation.laAndSkill( SkillType::swallow );
+    rotation.laAndSkill( SkillType::swallow );
+    rotation.laAndSkill( SkillType::twisting_path );
+
+    rotation.laAndSkill( SkillType::swallow, 20000 );
 
     DpsSym sym;
     sym.prepare( rotation );

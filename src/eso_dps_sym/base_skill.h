@@ -7,13 +7,28 @@
 
 #include "enum.h"
 #include "char_attributes.h"
+#include "base_buff.h"
 
-DECLARE_ENUM( SkillType, la, swallow )
+DECLARE_ENUM( SkillType, la, swallow,
+              twisting_path, twisting_path_dot,
+              resolve )
+
+struct SkillWithTime
+{
+    SkillType skill;
+    uint64_t time;
+};
+typedef std::vector< SkillWithTime > SkillWithTimes;
 
 class BaseSkill
 {
 public:
     virtual uint32_t damage( CharAttributes& attrs );
+
+    virtual SkillType typeOfDot(){ return SkillType::Undefine; }
+    virtual SkillWithTimes createDot(){ return SkillWithTimes(); }
+    virtual bool hasCrititcal(){ return true; }
+    virtual BuffType createBuff(){ return BuffType::Undefine; }
 
     BaseSkill(){}
     BaseSkill( double a_, double b_, double c_, uint64_t cost_ = 0 ):
