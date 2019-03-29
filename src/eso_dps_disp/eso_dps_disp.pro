@@ -3,7 +3,7 @@ include( ../common.pri )
 
 CONFIG += c++11
 CONFIG += qt
-QT += core
+QT += core widgets gui printsupport
 
 #-------------
 
@@ -17,7 +17,16 @@ LIBS += \
     -leso_dps_sym \
 
 SOURCES += \
-    main.cpp
+    main.cpp \
+    qcustomplot/qcustomplot.cpp \
+    plot_painter.cpp \
+    form_dpssym.cpp
 
 HEADERS += \
-    defines.h
+    defines.h \
+    qcustomplot/qcustomplot.h \
+    plot_painter.h \
+    form_dpssym.h
+
+FORMS += \
+    form_dpssym.ui

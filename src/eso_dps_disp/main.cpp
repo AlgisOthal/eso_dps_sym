@@ -1,31 +1,15 @@
 #include <iostream>
 
-#include <eso_dps_sym/char_attributes.h>
-#include <eso_dps_sym/rotation_prepare.h>
-#include <eso_dps_sym/dps_sym.h>
+#include <QApplication>
 
-#include "defines.h"
+#include <form_dpssym.h>
 
-int main()
+int main(int argc, char* argv[] )
 {
-    using namespace std;
+    QApplication app( argc, argv );
 
-    CharAttributes attrs = init_attrs;
-    cout << attrs << endl;
+    FormDpsSym fds;
+    fds.show();
 
-    RotationPrepare rotation;
-    rotation.skillAndWait( SkillType::resolve, 0 );
-    rotation.laAndSkill( SkillType::twisting_path );
-    rotation.laAndSkill( SkillType::swallow );
-    rotation.laAndSkill( SkillType::swallow );
-    rotation.laAndSkill( SkillType::swallow );
-    rotation.laAndSkill( SkillType::twisting_path );
-
-    rotation.laAndSkill( SkillType::swallow, 20000 );
-
-    DpsSym sym;
-    sym.prepare( rotation );
-    TakenDamages dmg = sym.symulate( attrs );
-
-    return 0;
+    return app.exec();
 }

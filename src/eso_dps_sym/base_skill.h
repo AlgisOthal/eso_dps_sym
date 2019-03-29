@@ -11,7 +11,9 @@
 
 DECLARE_ENUM( SkillType, la, swallow,
               twisting_path, twisting_path_dot,
-              resolve )
+              resolve, impale, grasp, grasp_dot,
+              blockade, blockade_dot,
+              spectral )
 
 struct SkillWithTime
 {

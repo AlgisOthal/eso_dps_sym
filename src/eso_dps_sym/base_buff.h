@@ -8,7 +8,7 @@
 #include "enum.h"
 #include "char_attributes.h"
 
-DECLARE_ENUM( BuffType, resolve )
+DECLARE_ENUM( BuffType, resolve, blockade )
 
 struct BuffWithTime
 {
@@ -58,6 +58,6 @@ public:
 };
 
 #define REGISTER_BUFF( type, buff ) \
-    RegistratorBuff<buff> skill ## _reg( type )
+    RegistratorBuff<buff> buff ## _reg( type )
 
 #endif // BASE_BUFF_H

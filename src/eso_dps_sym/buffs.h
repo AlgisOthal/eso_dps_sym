@@ -16,4 +16,18 @@ public:
     }
 };
 
+
+class BlockadeOfFireBuf: public BaseBuff
+{
+public:
+    BlockadeOfFireBuf():
+        BaseBuff( 8000 )
+    {}
+
+    virtual void processAttr( CharAttributes& attrs )
+    {
+        // TODO Boost LA
+    }
+};
+
 #endif // BUFFS_H
